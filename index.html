@@ -1,10 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>SkillOrbit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillOrbit - Tools & Skills</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background: #111827;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        p {
+            color: #cbd5e1;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            margin: 15px auto;
+            border-radius: 10px;
+            max-width: 400px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #38bdf8;
+            color: black;
+            font-weight: bold;
+        }
+
+        .result {
+            margin-top: 10px;
+            color: #22c55e;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to SkillOrbit</h1>
+
+<header>
+    <h1>SkillOrbit</h1>
     <p>Tools, Skills & Opportunities for a Better Future</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Username Generator</h2>
+        <button onclick="generate()">Generate Username</button>
+        <div class="result" id="result"></div>
+    </div>
+
+</div>
+
+<script>
+function generate() {
+    let words = ["Skill", "Orbit", "Pro", "AI", "Star", "Tech", "Fast", "Smart"];
+    let name = words[Math.floor(Math.random() * words.length)] +
+               words[Math.floor(Math.random() * words.length)] +
+               Math.floor(Math.random() * 99);
+
+    document.getElementById("result").innerText = name;
+}
+</script>
+
 </body>
 </html>
