@@ -72,7 +72,11 @@
         <button onclick="generate()">Generate Username</button>
         <div class="result" id="result"></div>
     </div>
-
+<div class="card">
+    <h2>Business Name Generator</h2>
+    <button onclick="generateBusiness()">Generate Name</button>
+    <div class="result" id="businessResult"></div>
+</div>
 </div>
 
 <script>
@@ -96,6 +100,20 @@ function generate() {
 
     let bio = bios[Math.floor(Math.random() * bios.length)];
     document.getElementById("bioResult").innerText = bio;
+    }
+    function generateBusiness() {
+    let words = [
+        "Tech", "Smart", "AI", "Digital", "Next", "Future",
+        "Prime", "Vision", "Global", "Nova", "Cloud", "Hub"
+    ];
+
+    let name =
+        words[Math.floor(Math.random() * words.length)] +
+        words[Math.floor(Math.random() * words.length)] +
+        " " +
+        words[Math.floor(Math.random() * words.length)];
+
+    document.getElementById("businessResult").innerText = name;
     }
 </script>
 <div class="card">
