@@ -84,6 +84,19 @@ function generate() {
 
     document.getElementById("result").innerText = name;
 }
+    function generateBio() {
+    let bios = [
+        "Dream big, work hard 💪",
+        "Creating my own future 🚀",
+        "Learning. Building. Growing. 📈",
+        "Focused on success 🔥",
+        "Tech lover | Future developer 💻",
+        "Turning ideas into reality ⚡"
+    ];
+
+    let bio = bios[Math.floor(Math.random() * bios.length)];
+    document.getElementById("bioResult").innerText = bio;
+    }
 </script>
 <div class="card">
     <h2>Bio Generator</h2>
