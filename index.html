@@ -232,6 +232,11 @@ function generate() {
 
     document.getElementById("passResult").innerText = password;
     }
+    function copyPassword() {
+    let text = document.getElementById("passResult").innerText;
+    navigator.clipboard.writeText(text);
+    alert("Password copied!");
+    }
 </script>
 <div class="card">
     <h2>Bio Generator</h2>
@@ -264,5 +269,6 @@ function generate() {
     <footer style="margin-top:30px; padding:20px; background:#111827;">
     <p>About Us | Privacy Policy | Contact Us</p>
     </footer>
+    <button onclick="copyPassword()">Copy Password</button>
 </body>
 </html>
