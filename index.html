@@ -237,6 +237,11 @@ function generate() {
     navigator.clipboard.writeText(text);
     alert("Password copied!");
     }
+    let clickSound = new Audio("https://www.soundjay.com/buttons/sounds/button-16.mp3");
+
+function playSound() {
+    clickSound.play();
+}
 </script>
 <div class="card">
     <h2>Bio Generator</h2>
