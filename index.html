@@ -135,6 +135,16 @@ function generate() {
 
     document.getElementById("ageResult").innerText = "Your age is: " + age + " years";
     }
+    function generatePassword() {
+    let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*";
+    let password = "";
+
+    for (let i = 0; i < 10; i++) {
+        password += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+
+    document.getElementById("passResult").innerText = password;
+    }
 </script>
 <div class="card">
     <h2>Bio Generator</h2>
