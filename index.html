@@ -242,6 +242,15 @@ function generate() {
 function playSound() {
     clickSound.play();
 }
+    function playSound() {
+    try {
+        let audio = new Audio("https://www.soundjay.com/buttons/sounds/button-16.mp3");
+        audio.volume = 1;
+        audio.play().catch(err => console.log("Sound blocked"));
+    } catch (e) {
+        console.log("Sound error");
+    }
+    }
 </script>
 <div class="card">
     <h2>Bio Generator</h2>
@@ -277,5 +286,6 @@ function playSound() {
     <button onclick="copyPassword()">Copy Password</button>
     <meta name="description" content="Free online tools - username generator, bio generator, password generator, business name generator by SkillOrbit">
     <button onclick="generate(); playSound()">Generate Username</button>
+    <button onclick="generate(); playSound()">Generate</button>
 </body>
 </html>
