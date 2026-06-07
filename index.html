@@ -115,11 +115,43 @@ function generate() {
 
     document.getElementById("businessResult").innerText = name;
     }
+    function calculateAge() {
+    let dob = document.getElementById("dob").value;
+    
+    if (!dob) {
+        document.getElementById("ageResult").innerText = "Please select date";
+        return;
+    }
+
+    let birthDate = new Date(dob);
+    let today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    let m = today.getMonth() - birthDate.getMonth();
+
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    document.getElementById("ageResult").innerText = "Your age is: " + age + " years";
+    }
 </script>
 <div class="card">
     <h2>Bio Generator</h2>
     <button onclick="generateBio()">Generate Bio</button>
     <div class="result" id="bioResult"></div>
 </div>
+    <div class="card">
+    <h2>Age Calculator</h2>
+    <input type="date" id="dob">
+    <button onclick="calculateAge()">Calculate Age</button>
+    <div class="result" id="ageResult"></div>
+    </div>
+    <div class="card">
+    <h2>Age Calculator</h2>
+    <input type="date" id="dob">
+    <button onclick="calculateAge()">Calculate Age</button>
+    <div class="result" id="ageResult"></div>
+    </div>
 </body>
 </html>
