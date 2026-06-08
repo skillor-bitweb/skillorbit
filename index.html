@@ -287,6 +287,27 @@ function playSound() {
     <meta name="description" content="Free online tools - username generator, bio generator, password generator, business name generator by SkillOrbit">
     <button onclick="generate(); playSound()">Generate Username</button>
     <button onclick="generate(); playSound()">Generate</button>
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBKxPQ7qFGhvB40UyWWywtVHOrGu8oZ6rI",
+  authDomain: "skill-or-bit.firebaseapp.com",
+  projectId: "skill-or-bit",
+  storageBucket: "skill-or-bit.firebasestorage.app",
+  messagingSenderId: "209101543536",
+  appId: "1:209101543536:web:99a186f73487312901bcb5",
+  measurementId: "G-HBEW65BZGC"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
     
 </body>
 </html>
